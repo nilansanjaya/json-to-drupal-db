@@ -2,8 +2,6 @@
 
 $cli_options = getopt("",array( "file:", "table::", "module::", "output::" ));
 
-//print_r($cli_options);
-
 // check for json file
 if( isset($cli_options['file']) && $cli_options['file']!="" ){
     $file = $cli_options['file'];
