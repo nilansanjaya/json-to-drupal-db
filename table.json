@@ -1,0 +1,41 @@
+{
+    "description" : "sample description",
+    "fields": {
+        "nid": {
+            "type": "serial",
+            "unsigned":true,
+            "not null": true
+        },
+        "vid": {
+            "type": "int",
+            "unsigned": true,
+            "not null": true,
+            "default": 0
+        },
+        "type": {
+            "type": "varchar",
+            "length": "32",
+            "not null": true,
+            "default": ""
+        },
+        "language": {
+            "type": "varchar",
+            "length": "12",
+            "not null": true,
+            "default": ""
+        },
+        "title": {
+            "type": "varchar",
+            "length": "255",
+            "not null": true,
+            "default": ""
+        }
+    },
+    "indexes": {
+        "node_changed" : ["changed"],
+        "node_created" : ["created", ["test","test"] ]
+    },
+    "unique keys": {
+        "vid" : ["vid"]
+    }
+}
