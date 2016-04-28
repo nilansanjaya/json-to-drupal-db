@@ -64,7 +64,7 @@ function loop_data($data,$level){
     foreach($data as $k=>$v) {
 
         if($x==0) {
-            $output .= "array(";
+            $output .= " array(";
         }
 
             $output .= "\n".get_indent($level)."'$k' =>";
@@ -110,7 +110,7 @@ function loop_object($data,$level){
     foreach($data as $k=>$v) {
 
         if($x==0) {
-            $output .= "array(";
+            $output .= " array(";
         }
 
         if(is_array($v)) {
@@ -153,7 +153,7 @@ $file_body =  "<?php
 
 function ".$module."_schema() {
 
-    \$schema['$table'] = $output;
+    \$schema['$table'] =$output;
 
 }
 ";
