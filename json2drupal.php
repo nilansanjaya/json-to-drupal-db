@@ -155,6 +155,8 @@ function ".$module."_schema() {
 
     \$schema['$table'] =$output;
 
+    return \$schema;
+
 }
 ";
 
