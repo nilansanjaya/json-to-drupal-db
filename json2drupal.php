@@ -151,6 +151,15 @@ function get_indent($level) {
 
 $file_body =  "<?php
 
+/**
+ * @file
+ * Provides a hook functions for Peak Brochure Order.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+
 function ".$module."_schema() {
 
     \$schema['$table'] =$output;
