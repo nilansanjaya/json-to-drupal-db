@@ -81,17 +81,17 @@ function loop_data($data,$level){
         else{
 
             if(is_bool($v)){
-                $output .= "'".($v ? 'TRUE' : 'FALSE')."'";
+                $output .= " '".($v ? 'TRUE' : 'FALSE')."'";
             }
             else {
-                $output .= "'$v'";
+                $output .= " '$v'";
             }
         }
 
         if($x == (count($data) - 1) ) {
-            $output .= "\n".get_indent($level-1).")";
+            $output .= ",\n".get_indent($level-1).")";
         }else{
-            $output .= ", ";
+            $output .= ",";
         }
 
         $x++;
@@ -123,7 +123,7 @@ function loop_object($data,$level){
         if($x == (count($data) - 1) ) {
             $output .= ")";
         }else{
-            $output .= ", ";
+            $output .= ",";
         }
 
         $x++;
@@ -142,7 +142,7 @@ function get_indent($level) {
     $level = $level + 2;
 
     for($i=0; $i<$level-1; $i++) {
-        $indent_string .= "\t";
+        $indent_string .= "  ";
     }
 
     return $indent_string;
@@ -161,9 +161,9 @@ $file_body =  "<?php
  */
 function ".$module."_schema() {
 
-    \$schema['$table'] =$output;
+  \$schema['$table'] =$output;
 
-    return \$schema;
+  return \$schema;
 
 }
 ";
