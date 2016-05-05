@@ -159,7 +159,6 @@ $file_body =  "<?php
 /**
  * Implements hook_schema().
  */
-
 function ".$module."_schema() {
 
     \$schema['$table'] =$output;
